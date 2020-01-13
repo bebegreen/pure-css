@@ -1,0 +1,153 @@
+#about{
+    color: #4d4d4f;
+    position: relative;
+    box-shadow:0 1px 10px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+}
+
+#blocksBackGround{
+    
+    padding: 16px 0 80px 0;
+    box-shadow:0 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.myGrid{ 
+    
+   display:grid; 
+   grid-template-columns: repeat(5, 20%);
+   grid-template-rows: repeat(5, 80px);
+  grid-gap: 10px; 
+  grid-template-areas:"a d d l g   "
+                      "a e h j g     " 
+                      "b e h j g       "
+                      "b f h i i  "
+                      "c f k k m   "   ;      
+   transition: all 0.5s ease;                  
+}
+@media (max-width:900px){ 
+    .myGrid{ 
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 200px;
+    }
+}
+.myGrid div{ 
+    color: white;
+    /*font-size: 20px;*/
+    /*padding: 20px;*/
+    transition: all 0.5s ease;
+    overflow: hidden;
+    /*background-position: center center;*/
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  border-radius: 10px;
+  
+    
+    
+}
+.myGrid div:hover{
+  transform: scale(1.1);
+  z-index: 50;
+}
+
+
+
+
+.item-1 {
+  background: lightcoral;
+  grid-area: a;
+}
+.item-2 {
+
+  background: #33a8a5;
+  grid-area: b;
+  
+}
+.item-3 {
+  background: #30997a;
+  grid-area: c;
+  
+}
+
+.item-4 {
+  background: #6a478f;
+  grid-area: d;
+
+}
+.item-5 {
+  background: lightgreen;
+  grid-area: e;
+  
+}
+.item-6 {
+  background: #3d8bb1;
+  grid-area:f;
+
+}
+.item-7 {
+  background: #e03f3f;
+  grid-area: g;
+}
+.item-8 {
+  background: #59a627;
+  grid-area:h;
+}
+.item-9 {
+  background: purple;
+  grid-area: i;
+}
+.item-10 {
+  background: lightblue;
+  grid-area: j;
+}
+.item-11 {
+  background: lightgreen;
+  grid-area: k;
+}
+.item-12 {
+  background: orangered;
+  grid-area: l;
+}
+.item-13 {
+  background: lightpink;
+  grid-area: m;
+}
+
+
+iframe{ 
+    width:0;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    opacity: 0;
+}
+#iframeTag{
+    width: 150px;
+    height: 30px;
+    background: rgba(0,0,0,0.3  );
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+    line-height: 2em;
+
+}
+#iframeTag:hover > iframe{ 
+    border:none;
+    width:80vmax;
+    height: 80vmin;
+    visibility: visible;
+    opacity: 1;
+    border-top-right-radius: 10px;
+}
+@media (max-width:1200px){ 
+    #iframeTag{ 
+        display: none;
+    }
+}

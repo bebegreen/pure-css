@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/firstProj.css" rel="stylesheet">
+    
+</head>
+
+<body>
+    <header>
+        <h1>Sketch Board</h1>
+        <nav>
+            <ul>
+                <li id="square" class="tab">
+                    Rectangle
+                </li>
+                <li id="oval" class="tab">
+                    Oval
+                </li>
+                <li>Color
+                    <div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div id="black" class="color"></div>
+                                </td>
+                                <td>
+                                    <div id="green" class="color"></div>
+                                </td>
+                                <td>
+                                    <div id="red" class="color"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="yellow" class="color"></div>
+                                </td>
+                                <td>
+                                    <div id="pink" class="color"></div>
+                                </td>
+                                <td>
+                                    <div id="orange" class="color"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="blue" class="color"></div>
+                                </td>
+                                <td>
+                                    <div id="purple" class="color"></div>
+                                </td>
+                                <td>
+                                    <div id="brown" class="color"></div>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </li>
+                <li id="deleteButton"> Delete </li>
+                <li id="load">Load</li>
+                <li id="launchSave">Save</li>
+
+
+            </ul>
+
+        </nav>
+
+    </header>
+    <div id="canvas">
+
+    </div>
+
+    <div id="saveMode">
+        <div id="savePrompt" class="promptDesign">
+            <h2>Save<span class='exit'>x</span></h2>
+            <div>
+                <label for="fileSave">Please name the file </label>
+                <input type="text" name="name" id="fileSave">
+                <button type="submit" id="saveBtn">save</button>
+            </div>
+
+        </div>
+        <div id='savedAlert'>
+            <h2> saved</h2>
+        </div>
+
+        <div id="loadPrompt" class="promptDesign">
+            <h2>Load<span class='exit'>x</span></h2>
+            <div>
+                <label for="fileList">Please select the file </label>
+                <select id="fileList">
+
+                </select>
+                <button type="submit" id="loadBtn">Load</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="../javascripts/firstProj.js">
+
+    </script>
+</body>
+
+</html>

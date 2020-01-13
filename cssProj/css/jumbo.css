@@ -1,0 +1,197 @@
+#jumbo{ 
+    /*margin-top:52px;*/
+    background: url('../images/try.jpg') no-repeat;
+    height: 100vh ;
+    background-size: 400% 400%;
+    background-position: 40% 20%;
+    font-size: 30px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    animation: zoom 40s linear  infinite;
+    color:white;
+}
+
+
+@keyframes zoom{ 
+    /*500%{ background-position: center right;  }*/
+    /*50% { background-size: 100% 100% ;background-size: center left }*/
+    /*33%{background-size:100% 100%; }*/
+    /*0%{background-size: 400% 400%}*/
+    33%{ background-position: left 20%; background-size: 150% 150%; }
+    66%{background-position: right 10% ; background-size: 150% 150% }
+    100%{background-position: 40% 20%}
+}
+/*@keyframes travel{ 
+    0%{}
+}*/
+
+
+
+#jumbo>.content { 
+    color: #fff;
+}
+#jumbo h1 { 
+    text-shadow: 0 0 75px;
+}
+#jumbo P { 
+    text-shadow: 0 0 7px;
+}
+#jumbo>.content>div {
+    padding-top: 100px;
+    opacity:0;
+    animation: fade 6s forwards;
+    letter-spacing: 3.5px;
+}
+@keyframes fade {
+    100%{ 
+        opacity: 1;
+    }
+}
+#jumboBtn {
+    background: rgba(0,0,0, 0.3);
+    border: 1px solid white;
+    width:250px;
+    line-height: 2em;
+    text-align: center;
+    border-radius: 3px;
+    margin: 50px auto;
+    transition: all .3s;
+}
+
+#jumboBtn:hover { 
+    cursor: pointer;
+    background: #f48c04;
+    border: 1px solid #f48c04;
+    animation: zoom 7s;
+}
+
+#arrow{ 
+    width: 30px;
+    margin: 0 auto;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    color: white;
+    opacity:0;
+    animation: blink 2s infinite;
+    padding-top: 10em;
+    
+}
+@keyframes blink { 
+    50% { 
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+
+#arrow img {
+    fill:currentColor;
+}
+#about img{ 
+    border-radius: 100%;
+    position: absolute;
+    height: 164px;
+    width: 163px;
+    top: -78px;
+    left: 70%;
+    border: 8px solid white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    content: url('../images/profile.jpg');
+    transition: all 0.5s linear; 
+}
+@media (max-width:1200px){
+    #jumbo img{ 
+        left: 70%;
+    }
+}
+@media (max-width:600px){
+    #jumbo img{ 
+        left: 60%;
+    }
+}
+@media (max-width:540px){
+    #about img{ 
+        display: none;
+    }
+    header ul{ 
+        visibility: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: -1;
+        position: absolute;
+        width:100%;
+        opacity:0;
+        transition: all 0.4s;
+        top:52px;
+        
+    }
+
+    #headerContent:hover ul, header ul:hover{ 
+        visibility: visible;
+        z-index: 100;
+        opacity:1
+    }
+ 
+    #headerContent:hover > #mobileMenu div { 
+        transform:  rotateY(180deg);
+    }
+    
+    header ul li{ 
+        background: white;
+        width:100%;
+        border:1px solid gray;
+        
+    }
+    header ul li a{
+        justify-content: center;
+        margin:0;
+        width:100%;
+        transition: all 0.3s;
+    }
+    header ul li a:hover{ 
+        color:white;
+        background: #117BFF;
+    }
+    header ul li:last-child a{
+        border:none;
+        height: 49px;
+        align-self: center;
+    }
+    header ul li:last-child{
+        border-bottom: 2px solid gray;
+    }
+  
+    #mobileMenu{
+        display:flex;
+    }
+    #mobileMenu div{
+        transition: all 0.5s;
+    }
+    #headerContent{ 
+        padding:0;
+    }
+    #jumboBtn{ 
+        width: 150px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)
+    }
+    #jumbo { 
+        font-size: 15px;
+    }
+    .content{ 
+        padding:20px;
+    }
+
+}
+
+#about img:hover{   
+    transform: rotateY(180deg);
+    animation: profile 1s forwards;
+
+}
+@keyframes profile{ 
+    100%{content: url('../images/profile.png')}
+}

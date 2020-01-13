@@ -1,0 +1,237 @@
+header {
+    width: 100%;
+    height: 140px;
+    background:lightskyblue;
+    padding: 0;
+    position: relative;
+    border-bottom: 1px solid lightslategray;
+    
+}
+
+body { 
+    background: lightblue;
+    margin: 0;
+    padding: 0;
+    font-family: 'myFancyFont';
+    font-size:1.4em;
+    
+    
+}
+@font-face
+{
+font-family: myFancyFont;
+src: url('../fonts/NicetoMeetYou.ttf');
+
+}
+
+h1 {
+
+   margin: 0;
+   line-height: 2.5em;
+   position:relative;
+   width: 100%; 
+   padding-left: 20px;
+   box-sizing: border-box;
+    
+}
+
+nav>ul>li{ 
+    background:lightgray;
+    width:100%;
+    line-height: 2em;
+    position: relative;
+    display:inline-block;
+    margin: 0 10px;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px; 
+
+}
+@media (min-width: 500px){ 
+    nav>ul>li{ 
+        width:100px;
+    }
+    nav { 
+        width: 100%;
+    }
+}
+nav>ul>li:hover {
+    cursor: pointer;
+    background: gray; 
+}
+ 
+nav {
+    position: absolute;
+    bottom: 0;
+    margin:0 ;
+    
+    
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background:url('../images/myBackground.png');
+    background-size: contain;
+   
+}
+
+.controler { 
+    width: 10px;
+    height: 10px;
+    border: black;
+    background:white;
+    position: absolute;
+    border: 1px solid black;
+    display: none;
+    z-index: 20;
+}
+.controler.RT, .controler.LB:hover {
+    cursor: nesw-resize;
+}
+.controler.LT, .controler.RB:hover {
+    cursor: nwse-resize;
+}
+
+
+.show {
+    display:block;
+}
+
+.RT {
+    top: -5px;
+    right: -5px;
+}
+
+.LT {
+    top:-5px;
+    left:-5px;
+}
+
+.LB {
+    bottom:-5px;
+    left: -5px;
+}
+.RB {
+    bottom: -5px;
+    right: -5px;
+}
+
+nav ul{ 
+    list-style: none;
+    margin: 0 40px;
+    padding: 0;
+
+}
+
+nav ul li>div {
+    width: 100%;
+    background: lightgray;
+    position:absolute;
+    display:none;
+}
+nav ul li table{
+    width: 100%;
+    
+}
+nav ul >li:hover > div{
+    display: block;
+    z-index: 500;
+}
+
+nav .color { 
+    width:100%;
+    height: 25px;
+}
+
+#black {
+    background: black;
+}
+
+#green { 
+    background: green;
+}
+
+#red {
+    background: red;
+}
+#yellow {
+    background: yellow;
+}
+
+#pink {
+    background: pink;
+}
+#orange {
+    background: orange;
+}
+#blue { 
+    background:blue;
+}
+#purple {
+    background: purple;
+}
+
+#brown {
+    background:brown;
+}
+
+nav>ul>li:nth-child(2n) { 
+    margin-right: 80px;
+}
+#saveMode {
+    background: rgba(0, 0 ,0 ,0.5);
+    height:100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    display: none;
+    z-index: 1000;
+}
+#savePrompt { 
+    display:none;
+}
+
+.promptDesign {
+    position: absolute;
+    width: 50%;
+    background: white;
+    height: 150px;
+    z-index: 50;
+    top:calc(50% - 75px);
+    margin: 0 calc(50% / 2);
+    display: none;
+}
+.promptDesign div {
+    margin:30px auto;
+    width: 450px;
+}
+.promptDesign h2 { 
+    background: blue;
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+h2 span {
+    position:absolute;
+    right:15px;
+}
+h2 span:hover, button {
+    cursor: pointer;
+}
+#savedAlert{
+     background: white;
+     text-align: center;
+     z-index: 1000;
+     width: 30%;
+     height: 100px;
+     border-radius:10px;
+     position: absolute;
+     top: 40%;
+     margin:0 calc(70% / 2);
+     display: none;
+     padding-top: 30px;
+}
